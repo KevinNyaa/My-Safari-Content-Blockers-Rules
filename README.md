@@ -1,0 +1,1 @@
+# My-Safari-Content-Blockers-Rules
