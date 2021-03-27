@@ -1,8 +1,5 @@
 ! Twitter
-||abs.twimg.com/responsive-web/client-web*/bundle.ExploreTopics.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/bundle.NetworkInstrument.$domain=twitter.com,important
-||abs.twimg.com/responsive-web/client-web*/bundle.TopicPeek.$domain=twitter.com,important
-||abs.twimg.com/responsive-web/client-web*/bundle.Topics.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/bundle.Trends.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/loader.ExploreSidebar.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/ondemand.BranchSdk.$domain=twitter.com,important
@@ -13,15 +10,20 @@
 ||twitter.com/i/api/*/branch/init.json$domain=twitter.com,important
 ||twitter.com/i/api/*/promoted_content$domain=twitter.com,important
 ||twitter.com/i/api/*/users/recommendations.json$domain=twitter.com,important
+||twitter.com/i/api/graphql/*/TopicToFollowSidebar$domain=twitter.com,important
 ||twitter.com/i/api/graphql/*/articleNudgeDomains$domain=twitter.com,important
 ||twitter.com/i/csp_report$domain=twitter.com,important
 ||twitter.com/i/trends$domain=twitter.com,important
 
-! Filter pages
+! Filter Pages
 ! O Timeline: ’s Tweets
+! O Timeline: Tweet
 ! O Timeline: Your Home Timeline
+! O Timeline: Search timeline
 ! O Timeline: Explore
-! [iOS 14] Not Article(Tweets)
-twitter.com##section:only-child > div:where([aria-label$=Timeline],[aria-label$=Tweets],[aria-label$=Explore]) > div > div > div > * > :not(article)
-! [iOS 14] Promoted Tweets and Blanks.
-twitter.com##section:only-child > div:where([aria-label$=Timeline],[aria-label$=Tweets],[aria-label$=Explore])  > div > div > div > :where([class*=" "],[data-testid="placementTracking"])
+! [iOS 14] Remove Not Article
+twitter.com##section:only-child > div:where([aria-label$=imeline],[aria-label*=Tweet],[aria-label$=Explore]) > div > div > div > * > :not(article)
+! [iOS 14] Remove Blanks and Promoted Tweets.
+twitter.com##section:only-child > div:where([aria-label$=imeline],[aria-label*=Tweet],[aria-label$=Explore]) > div > div > div > :where([class*=" "],[data-testid="placementTracking"])
+! Remove Footer
+twitter.com##nav[aria-label=Footer]
