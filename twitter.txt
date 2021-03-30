@@ -19,7 +19,7 @@
 ! O Timeline: ’s Tweets
 ! O Timeline: Tweet
 ! O Timeline: Your Home Timeline
-! O Timeline: Search timeline
+! X Timeline: Search timeline (break user cell)
 ! O Timeline: Explore
 ! [iOS 14] Remove Not Article
 twitter.com##section:only-child > div:where([aria-label$=imeline],[aria-label*=Tweet],[aria-label$=Explore]) > div > div > div > * > :not(article)
