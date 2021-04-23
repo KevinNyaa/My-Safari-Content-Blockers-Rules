@@ -1,20 +1,24 @@
-! Twitter
+! --- URL Rules --- !
 ||abs.twimg.com/responsive-web/client-web*/bundle.NetworkInstrument.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/bundle.Trends.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/loader.ExploreSidebar.$domain=twitter.com,important
 ||abs.twimg.com/responsive-web/client-web*/ondemand.BranchSdk.$domain=twitter.com,important
 ||ads-api.twitter.com$domain=twitter.com,important
-||api.twitter.com/*/jot/error_log.json$domain=twitter.com,important
 ||api.twitter.com/live_pipeline/events?topic=$domain=twitter.com,important
-||twitter.com/*/jot/client_event.json$domain=twitter.com,important
+||twitter.com/*/jot$domain=twitter.com,important
 ||twitter.com/i/api/*/branch/init.json$domain=twitter.com,important
 ||twitter.com/i/api/*/promoted_content$domain=twitter.com,important
 ||twitter.com/i/api/*/users/recommendations.json$domain=twitter.com,important
-||twitter.com/i/api/graphql/*/TopicToFollowSidebar$domain=twitter.com,important
 ||twitter.com/i/api/graphql/*/articleNudgeDomains$domain=twitter.com,important
+||twitter.com/i/api/graphql/*/TopicToFollowSidebar$domain=twitter.com,important
 ||twitter.com/i/csp_report$domain=twitter.com,important
 ||twitter.com/i/trends$domain=twitter.com,important
+||twitter.com/metrics$domain=twitter.com,important
+! Fix tweetdeck on iOS
+@@||twitter.com/1.1/friendships/show.json$domain=twitter.com,important
+@@||twitter.com/1.1/statuses/user_timeline.json$domain=twitter.com,important
 
+! --- Cosmetic Rules --- !
 ! Filter Pages
 ! O Timeline: ’s Tweets
 ! O Timeline: Tweet
