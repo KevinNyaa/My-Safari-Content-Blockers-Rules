@@ -12,7 +12,9 @@
 ||twitter.com/metrics$domain=twitter.com,important
 
 ! --- Cosmetic Rules --- !
-! [iOS 16+] Remove Not Article
-twitter.com##div[aria-label="Home timeline"] div[data-testid="cellInnerDiv"]:not(:has(article))
+! [iOS 16+] Remove not article(Who to follow(h2) + UserCell + Show more(a), Discover more(h2))
+twitter.com##div[data-testid=cellInnerDiv]:has(> div > div > article) ~div[data-testid=cellInnerDiv] > div > div > :where(div:has(h2), div[data-testid=UserCell],a)
+! [iOS 16+] Remove Discover more posts
+twitter.com##html:has(link[href*="/status/"]) div[data-testid=cellInnerDiv]:has(> div > div > div > h2) ~div
 ! Remove Footer
 twitter.com##nav[aria-label=Footer]
